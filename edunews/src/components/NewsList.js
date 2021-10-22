@@ -8,7 +8,7 @@ const NewsList = ()=>{
     const [news,setNews]=useState([]);
     useState(()=>{
         const getNews = async ()=>{
-            const res = await axios.get('https://newsapi.org/v2/everything?q=Indian Higher Education&from=2021-10-01&apiKey=457909b7ae64421ea338512398717b66');
+            const res = await axios.get('http://172.31.99.124:5000/');
             setNews(res.data.articles);
         }
         getNews();

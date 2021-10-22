@@ -6,8 +6,9 @@ const app = express();
 app.use(cors());
 app.get('/',(req,res)=>{
     newsapi.v2.everything({
-        q: 'bitcoin',
+        q: 'Indian Higher Education',
         language: 'en',
+        from: '2021-09-22',
         
       }).then(response => {
         res.json(response).status(200);
